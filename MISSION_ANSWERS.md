@@ -1,6 +1,6 @@
 # Day 14 Lab - Mission Answers
 
-> **Sinh viên:** Lê Danh Giang (`K5-L3B`)  
+> **Sinh viên:** Lê Danh Giang — MSSV: `2A202603912` (`K5-L3B`)  
 > **Repository:** `K5-L3B-DAY14-LeDanhGiang-2A202603912-Deployment-Benchmark-Observability`
 
 ---

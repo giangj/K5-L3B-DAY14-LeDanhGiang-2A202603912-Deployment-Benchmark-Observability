@@ -2,7 +2,7 @@
 
 > Mọi con số dưới đây được trích xuất trực tiếp từ các file JSON trong `reports/`, file CSV trong `benchmark-results/`, Jaeger UI và log JSON của container trong quá trình chạy thực tế.
 
-**Họ tên:** Lê Danh Giang (`K5-L3B`)  
+**Họ tên:** Lê Danh Giang — MSSV: `2A202603912` (`K5-L3B`)  
 **Ngày chạy:** 2026-11-26  
 **Môi trường:** Windows 11 + Docker Desktop 29.9.3 (WSL2 Linux engine) + Python 3.11.9
 

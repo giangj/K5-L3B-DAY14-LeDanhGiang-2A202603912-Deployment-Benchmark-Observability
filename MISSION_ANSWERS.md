@@ -97,7 +97,13 @@ X-XSS-Protection: 1; mode=block
 
 ### Exercise 3.1 / 3.2: Deploy lên Render (`render.yaml` Blueprint)
 - **Nền tảng chọn chính:** Render (Blueprint với `render.yaml` cấu hình sẵn `web` service runtime `docker` trỏ tới `06-lab-complete/` + dịch vụ `keyvalue` Redis kết nối tự động qua `REDIS_URL`).
-- **Public URL:** *(Chờ kích hoạt Blueprint trên Render Dashboard — sẽ điền URL và bổ sung 3 ảnh chụp tại `DEPLOYMENT.md` ngay sau khi Render báo Live).*
+- **Public URL:** https://k5-day14-ai-agent-xi1y.onrender.com
+- **Screenshots:** [dashboard.png](screenshots/dashboard.png), [running.png](screenshots/running.png), [test.png](screenshots/test.png)
+- **Kết quả 4 lệnh tự kiểm CP6 trên URL public (đã che `AGENT_API_KEY`):**
+  - `GET /health` → **`200`** (`{"status":"ok","environment":"production"}`)
+  - `GET /ready` → **`200`** (`{"status":"ready","redis":"ok"}`)
+  - `POST /ask` (thiếu key) → **`401`** (`{"detail":"Invalid or missing API key"}`)
+  - `POST /ask` (có `X-API-Key`) → **`200`** (`{"question":"Hello","answer":"Đây là câu trả lời từ AI agent (mock)...","user_id":"test","usage":{"input_tokens":1,"output_tokens":24,"cost_usd":1.455e-05}}`)
 
 ### So sánh `railway.toml` vs `render.yaml`
 | Tiêu chí | `railway.toml` | `render.yaml` |
